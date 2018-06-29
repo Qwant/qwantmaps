@@ -11,6 +11,10 @@ Qwant Maps can be seen as 4 separated components:
 
 ### Tile server
 
+A tile server is a service whose job is to give all that is needed to display a fraction of a map.
+
+Qwant Maps provides only [vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) so the tile server does not serve images (as it is done with [raster tiles](https://switch2osm.org/the-basics/)) but raw data. It is the front end, [tileview](#tileview) that takes the data and renders it into a user browsable map.
+
 The tile server is a combination of 2 great opensource projects:
 
 * [kartotherian](https://github.com/kartotherian/kartotherian), the wikimedia stack to have a highly available tile server. It is itself based on a number of [mapbox](https://www.mapbox.com/) components.
@@ -26,7 +30,7 @@ The geographical search engine (also called geocoder) used for Qwant Maps is [Mi
 
 Mimirsbrunn is a geocoder based on [Elastic Search](https://www.elastic.co) and rust components developed by [Kisio Digital](http://www.kisiodigital.com/).
 
-### Front end
+### Front end< a name="tileview"></a>
 
 Qwant Maps's front, [tileview](:construction: TODO link to tileview) is a javascript single page app.
 
@@ -40,7 +44,7 @@ To get more detail on Poi Of Interest (PoI) Qwant Maps uses an additional API, [
 
 ### Tiles data <a name="tilesdata"></a>
 
-The main source of data for the tile server are [OpenStreetMap](https://www.openstreetmap.org) (OSM) data but other data like [natural earth](http://www.naturalearthdata.com/), better water polygon, ... are also used.
+The main source of data for the tile server are the awsome [OpenStreetMap](https://www.openstreetmap.org) (OSM) data :heart: but other data like [natural earth](http://www.naturalearthdata.com/), better water polygon, ... are also used.
 
 All the tile's data import process is defined in an [python script](https://github.com/QwantResearch/kartotherian_config/blob/master/import_data/tasks.py).
 
@@ -56,9 +60,9 @@ The tool used to import in postgresql ([imposm3](https://imposm.org/docs/imposm3
 
 ### Geocoder data
 
-The data import process in [mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/task.py).
+The data import process in [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/task.py).
 
-First, the OSM data is given to [cosmogony](https://github.com/osm-without-borders/cosmogony) which output a big json file with all the world's administrative regions.
+First, the OSM data is given to [Cosmogony](https://github.com/osm-without-borders/cosmogony) which output a big json file with all the world's administrative regions.
 
 This file is then imported in Mimir by [cosmogony2mimir](https://github.com/CanalTP/mimirsbrunn#cosmogony2mimir).
 
@@ -66,7 +70,7 @@ We then import some addresses from [OpenAddresses](http://openaddresses.io/) usi
 
 The streets are imported afterward from the osm pbf file with [osm2mimir](https://github.com/CanalTP/mimirsbrunn#osm2mimir).
 
-Finally the PoIs are extracted from the postgresql database (thus we have a unified poi handling) using [fafnir](https://github.com/QwantResearch/fafnir).
+Finally the PoIs are extracted from the postgresql database (thus we have a unified poi handling) using [Fafnir](https://github.com/QwantResearch/fafnir).
 
 ### Idunn
 
