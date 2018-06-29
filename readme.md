@@ -22,7 +22,7 @@ All the data (see [below](#tilesdata)) are imported in a [Postgresql](https://ww
 
 ### Geocoder
 
-Qwant Maps uses as its geographical search engine (called a geocoder) [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn).
+The geographical search engine (also called geocoder) used for Qwant Maps is [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn).
 
 Mimirsbrunn is a geocoder based on [Elastic Search](https://www.elastic.co) and rust components developed by [Kisio Digital](http://www.kisiodigital.com/).
 
@@ -44,7 +44,7 @@ The main source of data for the tile server are [OpenStreetMap](https://www.open
 
 All the tile's data import process is defined in an [python script](https://github.com/QwantResearch/kartotherian_config/blob/master/import_data/tasks.py).
 
-This script import all the data in the Postgresql database and run lots of postprocess SQL functions (those functions are defined as postgresql triggers, so they will also be able to run on the [osm updates](#osm_updates).
+This script imports all the data in the Postgresql database and run lots of postprocess SQL functions (those functions are defined as postgresql triggers, so they will also be able to run on the [osm updates](#osm_updates).
 
 When the data is loaded in postgresql, we use [tilerator](https://github.com/kartotherian/tilerator) to generate all the tiles from the zoom level 0 to 14 and store them in cassandra.
 This way, when a vector tile is requested to the tiles API [kartotherian](https://github.com/kartotherian/kartotherian), no computation needs to be done, only a simple query by id on the highly available cassandra to get the raw protobuf tiles stored in it.
