@@ -36,7 +36,9 @@ To get more detail on Poi Of Interest (PoI) Qwant Maps uses an additional API, [
 
 ### Front end <a name="erdapfel"></a>
 
-Qwant Maps's front, [Erdapfel](:construction: TODO link to erdapfel) is a javascript single page app
+Qwant Maps's front, [Erdapfel](https://github.com/QwantResearch/erdapfel) is a javascript single page app that allows to browse the map, search for places, see your position on the map, etc. You can also save your favorite places, using [Masq](https://github.com/QwantResearch/masq).
+
+The front end uses [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/api/) to render the map, using both the tiles from the tile server, and QwantMaps [custom map style](https://github.com/QwantResearch/qwant-basic-gl-style).
 
 ## Data
 
@@ -108,4 +110,6 @@ The [readme](https://github.com/QwantResearch/idunn#running) details the way to 
 
 ### Front end
 
-:construction: TODO
+Erdapfel is a simple node application but you can also use docker to run it.
+
+You will need to set a few environment variables to link it to the other QwantMaps components. Check out the [readme](https://github.com/QwantResearch/erdapfel) to know more about the config.
