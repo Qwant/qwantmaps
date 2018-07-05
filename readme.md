@@ -58,7 +58,7 @@ This way, when a vector tile is requested to the tiles API [kartotherian](https:
 The import of the world's data is quite a long process so after the initial import, we have a [cron job](https://github.com/QwantResearch/kartotherian_config/blob/master/update/osm_update.sh) to read the osm differential updates and apply the diff in the postgresql database.
 The tool used to import in postgresql ([imposm3](https://imposm.org/docs/imposm3/latest/)) can output the list of tiles impacted by the changes, so we can ask tilerator to generate them again.
 
-### Geocoder data
+### Geocoder data <a name="geocoder_data><a/>
 
 The data import process in [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/task.py).
 
@@ -74,7 +74,10 @@ Finally the PoIs are extracted from the postgresql database (thus we have a unif
 
 ### Idunn
 
-:construction: TODO
+Idunn does not need its own data import process, but the API depends on:
+
+* the data of the [geocoder](#geocoder_data)
+* wikipedia data, fetched either on the wikipedia apis or in a custom elasticsearch database.
 
 ## Global picture
 
@@ -101,7 +104,9 @@ The repository [docker_mimir](https://github.com/QwantResearch/docker_mimir) con
 
 ### Idunn
 
-:construction: TODO
+[Idunn](https://github.com/QwantResearch/idunn) is quite straightforward to use as it is a simple python API (using [apistar](https://github.com/encode/apistar/)).
+
+The [readme](https://github.com/QwantResearch/idunn#running) details the way to run it.
 
 ### Front end
 
