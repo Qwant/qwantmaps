@@ -30,7 +30,7 @@ The geographical search engine (also called geocoder) used for Qwant Maps is [Mi
 
 Mimirsbrunn is a geocoder based on [Elastic Search](https://www.elastic.co) and rust components developed by [Kisio Digital](http://www.kisiodigital.com/).
 
-### Front end< a name="tileview"></a>
+### Front end <a name="tileview"></a>
 
 Qwant Maps's front, [tileview](:construction: TODO link to tileview) is a javascript single page app.
 
