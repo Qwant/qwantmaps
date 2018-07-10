@@ -6,14 +6,14 @@ Qwant Maps can be seen as 4 separated components:
 
 * a tile server
 * a search engine (geocoder)
-* a front end
 * an API to detail Pois
+* a front end
 
 ### Tile server
 
 A tile server is a service whose job is to give all that is needed to display a fraction of a map.
 
-Qwant Maps provides only [vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) so the tile server does not serve images (as it is done with [raster tiles](https://switch2osm.org/the-basics/)) but raw data. It is the front end, [tileview](#tileview) that takes the data and renders it into a user browsable map.
+Qwant Maps provides only [vector tiles](https://en.wikipedia.org/wiki/Vector_tiles) so the tile server does not serve images (as it is done with [raster tiles](https://switch2osm.org/the-basics/)) but raw data. It is the front end, [Erdapfel](#erdapfel) that takes the data and renders it into a user browsable map.
 
 The tile server is a combination of 2 great opensource projects:
 
@@ -30,15 +30,15 @@ The geographical search engine (also called geocoder) used for Qwant Maps is [Mi
 
 Mimirsbrunn is a geocoder based on [Elastic Search](https://www.elastic.co) and rust components developed by [Kisio Digital](http://www.kisiodigital.com/).
 
-### Front end <a name="tileview"></a>
-
-Qwant Maps's front, [tileview](:construction: TODO link to tileview) is a javascript single page app.
-
-:construction: TODO more on this
-
 ### Poi API
 
 To get more detail on Poi Of Interest (PoI) Qwant Maps uses an additional API, [Idunn](https://github.com/QwantResearch/idunn) that combines the information in the geocoder with external APIs to format detail PoIs data to display in the front end.
+
+### Front end <a name="erdapfel"></a>
+
+Qwant Maps's front, [Erdapfel](https://github.com/QwantResearch/erdapfel) is a javascript single page app that allows to browse the map, search for places, see your position on the map, etc. You can also save your favorite places, using [Masq](https://github.com/QwantResearch/masq).
+
+The front end uses [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/api/) to render the map, using both the tiles from the tile server, and QwantMaps [custom map style](https://github.com/QwantResearch/qwant-basic-gl-style).
 
 ## Data
 
@@ -58,7 +58,7 @@ This way, when a vector tile is requested to the tiles API [kartotherian](https:
 The import of the world's data is quite a long process so after the initial import, we have a [cron job](https://github.com/QwantResearch/kartotherian_config/blob/master/update/osm_update.sh) to read the osm differential updates and apply the diff in the postgresql database.
 The tool used to import in postgresql ([imposm3](https://imposm.org/docs/imposm3/latest/)) can output the list of tiles impacted by the changes, so we can ask tilerator to generate them again.
 
-### Geocoder data <a name="geocoder_data><a/>
+### Geocoder data <a name="geocoder_data"><a/>
 
 The data import process in [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/task.py).
 
@@ -72,7 +72,7 @@ The streets are imported afterward from the osm pbf file with [osm2mimir](https:
 
 Finally the PoIs are extracted from the postgresql database (thus we have a unified poi handling) using [Fafnir](https://github.com/QwantResearch/fafnir).
 
-### Idunn
+### POI API data
 
 Idunn does not need its own data import process, but the API depends on:
 
@@ -102,7 +102,7 @@ This repository heavily depends on [kartotherian_config](https://github.com/Qwan
 
 The repository [docker_mimir](https://github.com/QwantResearch/docker_mimir) contains a docker-compose to easily spawn the needed docker containers and to import the needed data in them.
 
-### Idunn
+### POI API
 
 [Idunn](https://github.com/QwantResearch/idunn) is quite straightforward to use as it is a simple python API (using [apistar](https://github.com/encode/apistar/)).
 
@@ -110,4 +110,6 @@ The [readme](https://github.com/QwantResearch/idunn#running) details the way to 
 
 ### Front end
 
-:construction: TODO
+Erdapfel is a simple node application but you can also use docker to run it.
+
+You will need to set a few environment variables to link it to the other QwantMaps components. Check out the [readme](https://github.com/QwantResearch/erdapfel) to know more about the config.
