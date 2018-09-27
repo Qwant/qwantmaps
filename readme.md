@@ -83,7 +83,11 @@ Idunn does not need its own data import process, but the API depends on:
 
 ![global architecture](images/global_archi.svg)
 
-## How to use
+NB: To provide the Qwant Maps service, Qwant hosts instances of the tile server, the geocoder and the Idunn API on its own servers.
+
+Please note that Qwant instances are internal components and are not meant (yet) to be used directly other than as part of Qwant Maps.
+
+## How to run
 
 ### Tiles
 
