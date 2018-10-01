@@ -32,7 +32,7 @@ Mimirsbrunn is a geocoder based on [Elasticsearch](https://www.elastic.co) and r
 
 ### POI API
 
-To get more details on Poi Of Interests (POIs), Qwant Maps uses an additional API: [Idunn](https://github.com/QwantResearch/idunn), that combines the information in the geocoder with external APIs to format detailed POIs data to display in the front end.
+To get more details on Points Of Interest (POIs), Qwant Maps uses an additional API: [Idunn](https://github.com/QwantResearch/idunn), that combines the information in the geocoder with external APIs to format detailed POIs data to display in the front end.
 
 ### Front end <a name="erdapfel"></a>
 
