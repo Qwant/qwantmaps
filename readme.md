@@ -1,12 +1,16 @@
 # Qwant Maps
 
+![Qwant Maps screenshot - Serving suggestion](screenshot.png)
+
+[Learn how you to contribute](contributing.md)
+
 ## Architecture
 
 Qwant Maps can be seen as 4 separated components:
 
 * a tile server
 * a search engine (geocoder)
-* an API to detail POIs
+* an API to detail points of interest and places
 * a front end
 
 ### Tile server
