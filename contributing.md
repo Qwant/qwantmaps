@@ -16,7 +16,7 @@ To get you started, check out:
 # Translating
  :fr:  :it:  :ru:  :de: *Help us bring Qwant Maps in your language*   :jp:  :kr:  :cn:  :es:
 
-You can join the translation team on [transifex](https://www.transifex.com/qwant-1/qwant-maps/translate/), ask for your language and start translating.
+You can join the translation team on [transifex](https://www.transifex.com/qwant-1/qwant-maps/), ask for your language and start translating.
 
 # Reporting Bugs or suggesting enhancements
 
