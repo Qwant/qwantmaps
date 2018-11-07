@@ -1,8 +1,11 @@
 # Qwant Maps
 
+Qwant Maps is a map application that respects your privacy.
+
+It is an opensource project, [learn how you can contribute](contributing.md)!
+
 ![Qwant Maps screenshot - Serving suggestion](screenshot.png)
 
-[Learn how you to contribute](contributing.md)
 
 ## Architecture
 
