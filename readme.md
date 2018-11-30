@@ -11,10 +11,10 @@ It is an opensource project, [learn how you can contribute](contributing.md)!
 
 Qwant Maps can be seen as 4 separated components:
 
-* a tile server
-* a search engine (geocoder)
-* an API to detail points of interest and places
-* a front end
+* a tile server,
+* a search engine (geocoder),
+* an API to detail points of interest and places,
+* a front end.
 
 ### Tile server
 
@@ -24,7 +24,7 @@ Qwant Maps provides only [vector tiles](https://en.wikipedia.org/wiki/Vector_til
 
 The tile server is a combination of 2 great opensource projects:
 
-* [kartotherian](https://github.com/kartotherian/kartotherian), the Wikimedia stack to have a highly available tile server. It is itself based on a number of [mapbox](https://www.mapbox.com/) components.
+* [kartotherian](https://github.com/kartotherian/kartotherian), the Wikimedia stack to have a highly available tile server. It is itself based on a number of [mapbox](https://www.mapbox.com/) components,
 * [OpenMapTiles](https://github.com/openmaptiles/openmaptiles), for their great and flexible tile schema.
 
 OpenMapTiles makes it possible for Qwant Maps to have an [easy to define/extend](https://github.com/QwantResearch/openmaptiles) vector tile schema.
@@ -51,11 +51,11 @@ The front end uses [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/api/) to rend
 
 ### Tiles data <a name="tilesdata"></a>
 
-The main source of data for the tile server is the awsome [OpenStreetMap](https://www.openstreetmap.org) (OSM) data :heart: but other data like [natural earth](http://www.naturalearthdata.com/), better water polygon... are also used.
+The main source of data for the tile server is the awesome [OpenStreetMap](https://www.openstreetmap.org) (OSM) data :heart: but other data like [natural earth](http://www.naturalearthdata.com/), better water polygon... are also used.
 
 All the tile's data import process is defined in a [python script](https://github.com/QwantResearch/kartotherian_config/blob/master/import_data/tasks.py).
 
-This script imports all the data in the PostgreSQL database and runs lots of post-process SQL functions (those functions are defined as postgresql triggers, so they will also be able to run on the [OSM updates](#osm_updates).
+This script imports all the data in the PostgreSQL database and runs lots of post-process SQL functions (those functions are defined as postgresql triggers), so they will also be able to run on the [OSM updates](#osm_updates).
 
 When the data is loaded in PostgreSQL, we use [tilerator](https://github.com/kartotherian/tilerator) to generate all the tiles from the zoom level 0 to 14 and store them in Cassandra.
 This way, when a vector tile is requested to the tiles API [kartotherian](https://github.com/kartotherian/kartotherian), no computation needs to be done, only a simple query by id on the highly available Cassandra to get the raw protobuf tiles stored in it.
@@ -83,7 +83,7 @@ Finally the POIs are extracted from the PostgreSQL database (thus we have a unif
 
 Idunn does not need its own data import process, but the API depends on:
 
-* the data of the [geocoder](#geocoder_data)
+* the data of the [geocoder](#geocoder_data),
 * Wikipedia data, fetched either on the Wikipedia APIs or in a custom Elasticsearch database.
 
 ## Global picture
