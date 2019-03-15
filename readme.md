@@ -83,8 +83,8 @@ Idunn does not need its own data import process, but the API depends on:
 
 ##### OSM updates <a name="osm_updates"></a>
 
-The world keeps moving and OpenStreetMap data is getting better and better eaeverych day, so we need to update the data in all our components on a regular basis.
-The import of the world's data is quite a long process, so after the initial import, we have a [cron job](https://github.com/QwantResearch/kartotherian_config/blob/master/update/osm_update.sh) to read the OSM differential updates and apply the diff in the PostgreSQL database on a daily basis.
+The world keeps moving and OpenStreetMap data is getting better and better every day, so we need to update the data in all our components on a regular basis.
+The import of the world's data is quite a long process, so after the initial import, we have a [cron job](https://github.com/QwantResearch/kartotherian_config/blob/master/import_data/osm_update.sh) to read the OSM differential updates and apply the diff in the PostgreSQL database on a daily basis.
 
 Once we have up-to-date data in PostgreSQL, we can import again the geocoder POIs data and regenerate the tiles impacted by the changes.
 
