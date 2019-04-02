@@ -10,7 +10,7 @@ Release date: April 1, 2019
 
 ### Improvements
 * Itineraries available for cars, pedestrians and bicycles.
-* Internationalized queries possible for admins.
+* Internationalized queries possible for administrative zones (cities, regions...).
 * Improvements on search field and geolocation process
 * Improvements about Directions UI and error handling
 * Misc fixes
