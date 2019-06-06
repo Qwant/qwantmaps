@@ -1,11 +1,42 @@
 # Qwant Maps
 
-Qwant Maps is a map application that respects your privacy.
-
-It is an opensource project, [learn how you can contribute](contributing.md)!
+Qwant Maps is a map application that respects your privacy. It is an opensource project, [learn how you can contribute](contributing.md)!
 
 ![Qwant Maps screenshot - Serving suggestion](screenshot.png)
 
+## Qwant Maps URL
+
+Qwant Maps provides links you can share with your friends to help them to #SwitchToQwant and #SwitchToOSM.
+For instance you can:
+- search for a specific location on the map with the following format:
+```
+https://www.qwant.com/maps/#map=<zoom level>/<latitude>/<longitude>
+```
+```
+https://www.qwant.com/maps/#map=12.08/48.8642287/2.3391427
+```
+
+- search a specific place on the map with the following path:
+```
+https://www.qwant.com/maps/place/<id>
+```
+```
+https://www.qwant.com/maps/place/osm:node:532031656@LExpress_de_Lyon
+```
+
+### A routing request
+
+This endpoint points to a routing form and can pre-fill some of the fields. For instance:
+```
+https://www.qwant.com/maps/routes/?origin=latlon:48.8459543:2.3714015@LExpress_de_Lyon&destination=latlon:48.8702200:2.2786330&arrival_datetime=20160613T135400&mode[]=walking#map=18.00/48.8459543/2.3714015
+```
+The parameters corresponding to this endpoint are the following:
+
+| Name | Required| Description |
+| -------- | :--------: | -------- |
+| origin    |   :x:   | `id` of some place to use as the starting point     |
+| destination    |   :x:   | `id` of some place to use as the ending point  |
+| mode   |   :x:   | if you want to pre-select a routing mode in the routing form. One of `walking`, `cycling`, `driving`, `public_transport`
 
 ## Architecture
 
