@@ -36,8 +36,6 @@ The parameters corresponding to this endpoint are the following:
 | -------- | :--------: | -------- |
 | origin    |   :x:   | `id` of some place to use as the starting point     |
 | destination    |   :x:   | `id` of some place to use as the ending point  |
-| arrival_datetime    |   :x:   | if you want to arrive to your destination before`datetime`
-| departure_datetime    |   :x:   | if you want to leave your origin after `datetime`
 | mode   |   :x:   | if you want to pre-select a routing mode in the routing form. One of `walking`, `cycling`, `driving`, `public_transport`
 
 ## Architecture
