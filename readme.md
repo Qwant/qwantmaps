@@ -33,7 +33,7 @@ https://www.qwant.com/maps/routes/?origin=latlon:48.8459543:2.3714015@LExpress_d
 The parameters corresponding to this endpoint are the following:
 
 | Name | Required| Description |
-| -------- | -------- | -------- |
+| -------- | :--------: | -------- |
 | origin    |   :x:   | `id` of some place to use as the starting point     |
 | destination    |   :x:   | `id` of some place to use as the ending point  |
 | arrival_datetime    |   :x:   | if you want to arrive to your destination before`datetime`
