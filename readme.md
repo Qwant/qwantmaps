@@ -8,10 +8,12 @@ Qwant Maps is a map application that respects your privacy. It is an opensource 
 
 Qwant Maps provides links you can share with your friends to help them to #SwitchToQwant and #SwitchToOSM.
 For instance you can:
-- search for a specific location on the map with the following format: `#map=` `{zoom level}/{latitude}/{longitude}`:
+- search for a specific location on the map with the following format:
+`https://www.qwant.com/maps/#map=<zoom level>/<latitude>/<longitude>`:
 `https://www.qwant.com/maps/#map=12.08/48.8642287/2.3391427`
 
-- search a specific place on the map with the following path: `place/{id}`:
+- search a specific place on the map with the following path:
+`https://www.qwant.com/maps/place/<id>`
 `https://www.qwant.com/maps/place/osm:node:532031656@LExpress_de_Lyon`
 
 ### A routing request
