@@ -38,8 +38,7 @@ Qwant Maps is developed in France and for now has been mainly tested by French p
 * [Join](https://wiki.openstreetmap.org/wiki/Mailing_lists) your local OpenStreetMap community, meet other mappers and improve the map
 * Tell us more about the administrative divisions in your country: we need them to add local context to your geographical searches. Learn more with [Cosmogony](https://github.com/osm-without-borders/cosmogony#contribute)
 * Enrich the test cases we use for our geographical search engine by contributing to [geocoder-tester](https://github.com/qwantresearch/geocoder-tester): Write a few search queries for your country and tell us what you expect Qwant Maps to find when you type these queries. [This file](https://github.com/qwantresearch/geocoder-tester/blob/master/geocoder_tester/world/italy/test_from_user_input.csv) provides a good example :it: to get you started.
-* Dit we mention "contribute to OpenStreetMap" ? :wink:
-
+* Did we mention "contribute to OpenStreetMap" ? :wink:
 
 # Others
 There are many other ways to contribute, from improving the documentation to writing blog posts. Please share your favorite locations on Qwant Maps with your friends and help them #SwitchToQwant #SwitchToOSM
