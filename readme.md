@@ -93,7 +93,7 @@ This way, when a vector tile is requested to the tiles API [kartotherian](https:
 
 #### Geocoder data <a name="geocoder_data"><a/>
 
-The data import process in [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/task.py).
+The data import process in [Mimirsbrunn](https://github.com/CanalTP/mimirsbrunn) is defined in a [python script](https://github.com/QwantResearch/docker_mimir/blob/master/tasks.py).
 
 First, the OSM data is given to [Cosmogony](https://github.com/osm-without-borders/cosmogony) which outputs a big JSON file with all the world's administrative regions.
 
