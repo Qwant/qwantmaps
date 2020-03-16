@@ -99,7 +99,7 @@ First, the OSM data is given to [Cosmogony](https://github.com/osm-without-borde
 
 This file is then imported in Mimir by [cosmogony2mimir](https://github.com/CanalTP/mimirsbrunn#cosmogony2mimir).
 
-We then import some addresses from [OpenAddresses](http://openaddresses.io/) using [openaddresses2mimir](https://github.com/CanalTP/mimirsbrunn#openaddresses2mimir).
+We then import addresses using [addresses-importer](https://github.com/QwantResearch/addresses-importer). It downloads datasets of addresses (from [OpenAddresses](http://openaddresses.io/) and [OpenStreetMap](https://www.openstreetmap.org) mostly), deduplicate them and then import them into our geocoder using [openaddresses2mimir](https://github.com/CanalTP/mimirsbrunn#openaddresses2mimir).
 
 The streets are imported afterwards from the OSM pbf file with [osm2mimir](https://github.com/CanalTP/mimirsbrunn#osm2mimir).
 
