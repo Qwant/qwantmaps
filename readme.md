@@ -74,7 +74,7 @@ To get more details on places and Points Of Interest (POIs), Qwant Maps uses an 
 
 #### Front end <a name="erdapfel"></a>
 
-Qwant Maps's front, [Erdapfel](https://github.com/QwantResearch/erdapfel), is a Javascript single page app that allows to browse the map, search for places, see your position on the map, etc. You can also save your favorite places, using [Masq](https://github.com/QwantResearch/masq).
+Qwant Maps's front, [Erdapfel](https://github.com/QwantResearch/erdapfel), is a Javascript single page app that allows to browse the map, search for places, see your position on the map, etc. You can also save your favorite places, using [Masq](https://github.com/QwantResearch/masq-app).
 
 The front end uses [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/api/) to render the map, using both the tiles from the tile server, and Qwant Maps [custom map style](https://github.com/QwantResearch/qwant-basic-gl-style).
 
