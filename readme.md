@@ -1,30 +1,37 @@
-# Qwant Maps
+<h1 align="center">
+  <img src="./images/logo.png" alt="QwantMaps" width="200" height="200" />
+</h1>
 
-Qwant Maps is a map application that respects your privacy. It is an opensource project, [learn how you can contribute](contributing.md)!
+<h5 align="center">
+  <a href="https://www.qwant.com/maps">Maps</a> |
+  <a href="./contributing.md">Contribute</a> |
+  <a href="https://betterweb.qwant.com/en/qwant-maps-a-open-and-privacy-focused-map/">About</a> |
+  <a href="https://github.com/Qwant/erdapfel">Frontend</a> |
+  <a href="https://github.com/Qwant/kartotherian_docker">Tile server</a> |
+  <a href="https://github.com/CanalTP/mimirsbrunn">Geocoder</a> |
+  <a href="https://github.com/Qwant/idunn">Internal API</a>
+</h5>
 
-![Qwant Maps screenshot - Serving suggestion](screenshot.png)
+<p align="center">
+🗺️ <a href="https://www.qwant.com/maps"><strong>Qwant Maps</strong></a> is a map application that respects your privacy 🔍
+</p>
 
-## Qwant Maps URL
+![Qwant Maps screenshot](screenshot.png)
+
+## Qwant Maps URLs
 
 Qwant Maps provides links you can share with your friends to help them to #SwitchToQwant and #SwitchToOSM.
 For instance you can:
-- search for a specific location on the map with the following format:
-```
-https://www.qwant.com/maps/#map=<zoom level>/<latitude>/<longitude>
-```
-```
-https://www.qwant.com/maps/#map=12.08/48.8642287/2.3391427
-```
+- search for a specific location on the map with the following format:  
+`https://www.qwant.com/maps/#map=<zoom level>/<latitude>/<longitude>`  
+[`https://www.qwant.com/maps/#map=12.08/48.8642287/2.3391427`]()
 
-- search a specific place on the map with the following path:
-```
-https://www.qwant.com/maps/place/<id>
-```
-```
-https://www.qwant.com/maps/place/osm:node:532031656@LExpress_de_Lyon
-```
 
-### A routing request
+- search a specific place on the map with the following path:  
+`https://www.qwant.com/maps/place/<id>`  
+[`https://www.qwant.com/maps/place/osm:node:532031656@LExpress_de_Lyon`]()
+
+#### A routing request
 
 This endpoint points to a routing form and can pre-fill some of the fields. For instance:
 ```
