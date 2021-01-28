@@ -22,11 +22,11 @@ You can join the translation team on [transifex](https://www.transifex.com/qwant
 
 If you find a bug on the map (a missing place or some outdated location), you can fix it by [contributing to OpenStreetMap](https://www.openstreetmap.org/welcome). If you don't want to take the time to sign up and learn how to edit, you can also [add a note on OSM website](https://www.openstreetmap.org/note/new) so other contributors may investigate.
 
-Otherwise, you can [submit an issue](https://github.com/QwantResearch/qwantmaps/issues/new) in this repository. Please provide as much details as you can, with screenshots and steps to reproduce.
+Otherwise, you can [submit an issue](https://github.com/Qwant/qwantmaps/issues/new) in this repository. Please provide as much details as you can, with screenshots and steps to reproduce.
 
 # Contributing code and documentation changes
 
-If you want to deep dive and help out with some development on Qwant Maps, then first read along in this repository to understand the architecture and find out some repository to contribute on. [Cosmogony](https://github.com/osm-without-borders/cosmogony) (the tool we use to understand administrative zones) or [Erdapfel](https://github.com/QwantResearch/erdapfel) (Qwant Maps website) may be good candidates to get started.
+If you want to deep dive and help out with some development on Qwant Maps, then first read along in this repository to understand the architecture and find out some repository to contribute on. [Cosmogony](https://github.com/osm-without-borders/cosmogony) (the tool we use to understand administrative zones) or [Erdapfel](https://github.com/Qwant/erdapfel) (Qwant Maps website) may be good candidates to get started.
 
 If you have a bugfix or new feature that you would like to contribute to the project, please find or open an issue about it first: maybe we are already working on it, or there are particular issues that you should know about before implementing the change. :pray: Thanks again!
 
@@ -37,7 +37,7 @@ Qwant Maps is developed in France and for now has been mainly tested by French p
 * Test Qwant Maps in your language and in your country and tell us what should be improved
 * [Join](https://wiki.openstreetmap.org/wiki/Mailing_lists) your local OpenStreetMap community, meet other mappers and improve the map
 * Tell us more about the administrative divisions in your country: we need them to add local context to your geographical searches. Learn more with [Cosmogony](https://github.com/osm-without-borders/cosmogony#contribute)
-* Enrich the test cases we use for our geographical search engine by contributing to [geocoder-tester](https://github.com/qwantresearch/geocoder-tester): Write a few search queries for your country and tell us what you expect Qwant Maps to find when you type these queries. [This file](https://github.com/qwantresearch/geocoder-tester/blob/master/geocoder_tester/world/italy/test_from_user_input.csv) provides a good example :it: to get you started.
+* Enrich the test cases we use for our geographical search engine by contributing to [geocoder-tester](https://github.com/qwant/geocoder-tester): Write a few search queries for your country and tell us what you expect Qwant Maps to find when you type these queries. [This file](https://github.com/qwant/geocoder-tester/blob/master/geocoder_tester/world/italy/test_from_user_input.csv) provides a good example :it: to get you started.
 * Did we mention "contribute to OpenStreetMap" ? :wink:
 
 # Others
