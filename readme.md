@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./images/logo.png" alt="QwantMaps" width="200" height="200" />
+  <img src="./images/logo.png" alt="QwantMaps" width="520" height="200" />
 </h1>
 
 <h5 align="center">
