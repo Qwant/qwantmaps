@@ -21,7 +21,7 @@
 ## Qwant Maps URLs
 
 Qwant Maps provides links you can share with your friends to help them to #SwitchToQwant and #SwitchToOSM.
-For instance you can:
+For instance, you can:
 - search for a specific location on the map with the following format:  
 `https://www.qwant.com/maps/#map=<zoom level>/<latitude>/<longitude>`  
 Example: https://www.qwant.com/maps/#map=12.08/48.8642287/2.3391427
