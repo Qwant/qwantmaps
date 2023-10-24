@@ -122,7 +122,7 @@ Idunn does not need its own data import process, but the API depends on:
 ##### OSM updates <a name="osm_updates"></a>
 
 The world keeps moving and OpenStreetMap data is getting better and better every day, so we need to update the data in all our components on a regular basis.
-We update the tiles entirely on weekly basis from (OSM planet pbf)[https://registry.opendata.aws/osm/]
+We update the tiles entirely on weekly basis from [OSM planet pbf](https://registry.opendata.aws/osm/)
 
 In the same time we have to up-to-date data in PostgreSQL, we can import again the geocoder POIs data with  the current version of the tiles.
 
